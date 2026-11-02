@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout target repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
@@ -27,7 +27,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           # 1. 添加原作者 upstream 仓库
-          git remote add upstream https://github.com/Rocky7842/proprietary_vendor_samsung_exynos9820-common.git
+          git remote add upstream https://github.com/xiaomi-msm8998-devs/android_hardware_qcom-caf_common.git
 
           # 2. 获取原作者所有分支的最新更新
           git fetch upstream
